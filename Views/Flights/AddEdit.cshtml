@@ -1,0 +1,55 @@
+@model Flight.Models.FlightModel
+
+<h2>@ViewBag.Action Flight</h2>
+
+<form asp-action="@ViewBag.Action" method="post">
+
+    <div class="mb-3">
+        <label asp-for="FlightNumber" class="form-label"></label>
+
+        @if (ViewBag.Action == "Edit")
+        {
+            <input asp-for="FlightNumber" class="form-control" readonly />
+        }
+        else
+        {
+            <input asp-for="FlightNumber" class="form-control" />
+        }
+
+        <span asp-validation-for="FlightNumber" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="FromCity" class="form-label"></label>
+        <select asp-for="FromCity"
+                asp-items="ViewBag.FromList"
+                class="form-select">
+        </select>
+        <span asp-validation-for="FromCity" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ToCity" class="form-label"></label>
+        <select asp-for="ToCity"
+                asp-items="ViewBag.ToList"
+                class="form-select">
+        </select>
+        <span asp-validation-for="ToCity" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Date" class="form-label"></label>
+        <input asp-for="Date" class="form-control" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="List" class="btn btn-secondary">Cancel</a>
+
+</form>

@@ -1,0 +1,49 @@
+@model List<Flight.Models.FlightModel>
+
+<h2>Flights</h2>
+
+<a asp-action="Add"
+   asp-route-slug="new-flight"
+   class="btn btn-primary mb-3">
+    Add Flight
+</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Flight</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Date</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var f in Model)
+    {
+        <tr>
+            <td>@f.FlightNumber</td>
+            <td>@f.FromCity</td>
+            <td>@f.ToCity</td>
+            <td>@f.Date.ToString("MM/dd/yyyy")</td>
+            <td>@f.Price.ToString("C")</td>
+            <td>
+                <a asp-action="Edit"
+                   asp-route-id="@f.FlightNumber"
+                   asp-route-slug="edit-flight"
+                   class="btn btn-warning btn-sm">
+                    Edit
+                </a>
+
+                <a asp-action="Delete"
+                   asp-route-id="@f.FlightNumber"
+                   asp-route-slug="delete-flight"
+                   class="btn btn-danger btn-sm">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
