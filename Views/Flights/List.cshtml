@@ -1,6 +1,6 @@
 @model List<Flight.Models.FlightModel>
 
-<h2>Flights</h2>
+<h2 class="mb-3">Flights</h2>
 
 <a asp-action="Add"
    asp-route-slug="new-flight"
@@ -8,7 +8,7 @@
     Add Flight
 </a>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-hover shadow-sm">
     <thead class="table-dark">
         <tr>
             <th>Flight</th>
@@ -16,7 +16,7 @@
             <th>To</th>
             <th>Date</th>
             <th>Price</th>
-            <th>Action</th>
+            <th class="text-center">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -28,11 +28,12 @@
             <td>@f.ToCity</td>
             <td>@f.Date.ToString("MM/dd/yyyy")</td>
             <td>@f.Price.ToString("C")</td>
-            <td>
+            <td class="text-center">
+
                 <a asp-action="Edit"
                    asp-route-id="@f.FlightNumber"
                    asp-route-slug="edit-flight"
-                   class="btn btn-warning btn-sm">
+                   class="btn btn-success btn-sm me-2">
                     Edit
                 </a>
 
@@ -42,6 +43,7 @@
                    class="btn btn-danger btn-sm">
                     Delete
                 </a>
+
             </td>
         </tr>
     }

@@ -208,3 +208,4 @@ C:\Users\ramch\OneDrive\mvc2_allfiles\aspnet_core_mvc\book_apps\Flight\Flight\ob
 C:\Users\ramch\OneDrive\mvc2_allfiles\aspnet_core_mvc\book_apps\Flight\Flight\obj\Debug\net9.0\Flight.pdb
 C:\Users\ramch\OneDrive\mvc2_allfiles\aspnet_core_mvc\book_apps\Flight\Flight\obj\Debug\net9.0\Flight.genruntimeconfig.cache
 C:\Users\ramch\OneDrive\mvc2_allfiles\aspnet_core_mvc\book_apps\Flight\Flight\obj\Debug\net9.0\ref\Flight.dll
+C:\Users\ramch\OneDrive\mvc2_allfiles\aspnet_core_mvc\book_apps\Flight\Flight\obj\Debug\net9.0\Flight.sourcelink.json
